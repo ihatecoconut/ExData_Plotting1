@@ -1,0 +1,5 @@
+datetime <- strptime(paste(projectsub$Date, projectsub$Time, sep=""), "%d/%m/%Y %H:%M:%S")
+projectsubGAP <- as.numeric(projectsub$Global_active_power)
+png("plot2.png", width=400, height=400)
+plot(datetime, projectsubGAP, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+dev.off()
